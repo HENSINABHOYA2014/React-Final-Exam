@@ -31,20 +31,37 @@ const Login=()=>{
     }
 return(
     <>
-<div>
-  <table>
-    
+   <div>
+  <div id="main" className="main-container">
+    <div className="box">
+      <h2>Login</h2>
+      <form>
+        <div className="input-box">
+          <input id="user-name" type="text"  placeholder="Email" name="email" onChange={(e) => setEmail(e.target.value)} value={email}/>
+          <label>Username</label>
+        </div>
+        <div className="input-box">
+          <input id="user-pass" type="password" placeholder="Password" name="password" onChange={(e) => setPassword(e.target.value)} value={password} />
+          <label>Password</label>
+        </div>
+        <NavLink type="button" id="submit" className="btn2 ms-5" to='/notes' onClick={() => handleSubmit()}>Sign In</NavLink>
+      </form>
       
+      <p><a href="#">Register</a></p>
+    </div>
+  </div>
+  <div id="logged-in">
+  </div>
+</div>
 
-   
+{/* <div>
+  <table>   
     <input type="email" placeholder="Email" name="email" onChange={(e) => setEmail(e.target.value)} value={email} className="input" />
                    <input type="password" placeholder="Password" name="password" onChange={(e) => setPassword(e.target.value)} value={password} className="input " />
                 
                  <NavLink type="button" className="btn2 ms-5" to='/notes' onClick={() => handleSubmit()}>Sign In</NavLink>
   </table>
-</div>
-
-
+</div> */}
 </>
 )
 }

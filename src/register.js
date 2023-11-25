@@ -42,25 +42,43 @@ const Register = () => {
     },[])
 
     return (
-    
-<div>
-  <table>
-    
-      
-  <input type="text"  placeholder="Username" name="name" onChange={(e) => setName(e.target.value)} value={name} className=" bg-info input mt-3" />
-   
-    <input type="email" placeholder="Email" name="email" onChange={(e) => setEmail(e.target.value)} value={email} className="input" />
-                   <input type="password" placeholder="Password" name="password" onChange={(e) => setPassword(e.target.value)} value={password} className=" input bg-info" />
-                   <input type="text" placeholder="city" name="city" onChange={(e) => setCity(e.target.value)} value={city} className="input" />
-                   <input type="number" placeholder="Phone" name="phone" onChange={(e) => setPhone(e.target.value)} value={Phone} className="input mb-3 bg-info" />
-       <div className="login_option mb-3">
-                     <a href="#" className="account"><i className="fa-brands fa-google" style={{ color: '#000000' }} /></a>
-                     <a href="#" className="account"><i className="fa-brands fa-github" style={{ color: '#000000' }} /></a>
-                  <a href="#" className="account"><i className="fa-brands fa-twitter" style={{ color: '#000000' }} /></a>
-                     </div>
-                 <NavLink type="button" className="btn2" to='/login' onClick={() => handleSubmit()}>Sign In</NavLink>
-  </table>
+    <>
+    <div>
+  <div id="main" className="main-container">
+    <div className="box">
+      <h2>Login</h2>
+      <form>
+        <div className="input-box">
+          <input id="user-name"  placeholder="Username" name="name" onChange={(e) => setName(e.target.value)} value={name} type="text" />
+          <label>Name</label>
+        </div>
+        <div className="input-box">
+          <input id="user-name"  placeholder="Email" name="Email" onChange={(e) => setName(e.target.value)} value={email} type="text" />
+          <label>Email</label>
+        </div>
+        <div className="input-box">
+          <input id="user-pass" type="password"  placeholder="Password" name="password" onChange={(e) => setPassword(e.target.value)} value={password} />
+          <label>Password</label>
+        </div>
+        <div className="input-box">
+          <input id="user-pass" type="password"  placeholder="City" name="city" onChange={(e) => setCity(e.target.value)} value={city} />
+          <label>City</label>
+        </div>
+        <div className="input-box">
+          <input id="user-pass" type="phone"  placeholder="Phone" name="phone" onChange={(e) => setPhone(e.target.value)} value={Phone} />
+          <label>Phone</label>
+        </div>
+        <NavLink type="button" className="btn2" to='/login' onClick={() => handleSubmit()}>Sign In</NavLink>
+      </form>
+      <p><a href="#">Lost your password?</a></p>
+      <p><a href="#">Register</a></p>
+    </div>
+  </div>
+  <div id="logged-in">
+  </div>
 </div>
+
+    </>
 
 
 
